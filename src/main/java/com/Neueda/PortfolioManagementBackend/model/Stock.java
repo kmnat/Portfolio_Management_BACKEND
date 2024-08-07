@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 @Entity
 public class Stock {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer stock_id;
+    @Column(name = "stock_id")
+    private String ticker_symbol;
 
     @Column(name = "average_volume")
     private double averageVolume;
@@ -29,12 +29,12 @@ public class Stock {
     @Column(name = "week52low")
     private double week52Low;
 
-    public Integer getStock_id() {
-        return stock_id;
+    public String getStock_id() {
+        return ticker_symbol;
     }
 
-    public void setStock_id(Integer stock_id) {
-        this.stock_id = stock_id;
+    public void setStock_id(String ticker_symbol) {
+        this.ticker_symbol = ticker_symbol;
     }
 
     public double getAverageVolume() {
