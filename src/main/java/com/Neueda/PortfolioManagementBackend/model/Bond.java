@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 @Entity
 public class Bond {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer bond_id;
+    @Column(name = "bond_id")
+    private String ticker_symbol;
 
     @Column(name = "bond_price")
     private double bondPrice;
@@ -25,12 +25,12 @@ public class Bond {
     @Column(name = "maturity_date")
     private String maturityDate;
 
-    public Integer getBond_id() {
-        return bond_id;
+    public String getBond_id() {
+        return ticker_symbol;
     }
 
-    public void setBond_id(Integer bond_id) {
-        this.bond_id = bond_id;
+    public void setBond_id(String bond_id) {
+        this.ticker_symbol = bond_id;
     }
 
     public double getBondPrice() {
