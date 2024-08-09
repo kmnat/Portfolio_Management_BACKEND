@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class StockService {
@@ -17,9 +16,9 @@ public class StockService {
     {
         return stockrepo.findAll();
     }
-
-    public Optional<Stock> getStockById(String id)
-    {
-        return stockrepo.findById(id);
-    }
+//
+//    public Stock getStockById(Integer id)
+//    {
+//        return stockrepo.findById(id);
+//    }
 }
