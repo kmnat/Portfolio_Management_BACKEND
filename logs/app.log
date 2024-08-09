@@ -1,0 +1,78 @@
+2024-08-09T05:14:44.645Z  INFO 5948 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Starting PortfolioManagementBackendApplication using Java 17.0.7 with PID 5948 (C:\Users\Administrator\Desktop\portfoliomanagement-backend\target\classes started by Administrator in C:\Users\Administrator\Desktop\portfoliomanagement-backend)
+2024-08-09T05:14:44.658Z  INFO 5948 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-09T05:14:46.411Z  INFO 5948 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-09T05:14:46.551Z  INFO 5948 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2024-08-09T05:14:47.792Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-09T05:14:47.817Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-09T05:14:47.818Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-09T05:14:47.969Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-09T05:14:47.970Z  INFO 5948 --- [PortfolioManagementBackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3194 ms
+2024-08-09T05:14:48.335Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-09T05:14:48.494Z  INFO 5948 --- [PortfolioManagementBackend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-09T05:14:48.586Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-09T05:14:49.218Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-09T05:14:49.329Z  INFO 5948 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-09T05:14:50.400Z  INFO 5948 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31940704
+2024-08-09T05:14:50.403Z  INFO 5948 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-09T05:14:53.070Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-09T05:14:54.163Z  INFO 5948 --- [PortfolioManagementBackend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T05:14:55.008Z  WARN 5948 --- [PortfolioManagementBackend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-09T05:14:55.870Z  INFO 5948 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-09T05:14:55.884Z  INFO 5948 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Started PortfolioManagementBackendApplication in 12.282 seconds (process running for 13.575)
+2024-08-09T05:43:52.022Z  INFO 5948 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T05:43:52.033Z  INFO 5948 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-09T05:43:52.054Z  INFO 5948 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-09T05:43:58.210Z  INFO 5992 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Starting PortfolioManagementBackendApplication using Java 17.0.7 with PID 5992 (C:\Users\Administrator\Desktop\portfoliomanagement-backend\target\classes started by Administrator in C:\Users\Administrator\Desktop\portfoliomanagement-backend)
+2024-08-09T05:43:58.215Z  INFO 5992 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-09T05:43:59.738Z  INFO 5992 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-09T05:43:59.870Z  INFO 5992 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 6 JPA repository interfaces.
+2024-08-09T05:44:00.879Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-09T05:44:00.899Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-09T05:44:00.900Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-09T05:44:01.016Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-09T05:44:01.017Z  INFO 5992 --- [PortfolioManagementBackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2722 ms
+2024-08-09T05:44:01.300Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-09T05:44:01.394Z  INFO 5992 --- [PortfolioManagementBackend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-09T05:44:01.456Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-09T05:44:02.048Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-09T05:44:02.090Z  INFO 5992 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-09T05:44:02.792Z  INFO 5992 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e753289
+2024-08-09T05:44:02.795Z  INFO 5992 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-09T05:44:04.682Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-09T05:44:05.750Z  INFO 5992 --- [PortfolioManagementBackend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T05:44:06.389Z  WARN 5992 --- [PortfolioManagementBackend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-09T05:44:07.099Z  INFO 5992 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-09T05:44:07.115Z  INFO 5992 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Started PortfolioManagementBackendApplication in 9.76 seconds (process running for 10.519)
+2024-08-09T05:50:52.247Z  INFO 5992 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-09T05:50:52.248Z  INFO 5992 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-09T05:50:52.251Z  INFO 5992 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-09T06:39:24.113Z  INFO 5992 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T06:39:24.123Z  INFO 5992 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-09T06:39:24.137Z  INFO 5992 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-09T06:39:29.647Z  INFO 8976 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Starting PortfolioManagementBackendApplication using Java 17.0.7 with PID 8976 (C:\Users\Administrator\Desktop\portfoliomanagement-backend\target\classes started by Administrator in C:\Users\Administrator\Desktop\portfoliomanagement-backend)
+2024-08-09T06:39:29.654Z  INFO 8976 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-09T06:39:31.444Z  INFO 8976 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-09T06:39:31.615Z  INFO 8976 --- [PortfolioManagementBackend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 6 JPA repository interfaces.
+2024-08-09T06:39:33.063Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-09T06:39:33.085Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-09T06:39:33.085Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-09T06:39:33.204Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-09T06:39:33.204Z  INFO 8976 --- [PortfolioManagementBackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3422 ms
+2024-08-09T06:39:33.512Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-09T06:39:33.622Z  INFO 8976 --- [PortfolioManagementBackend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-09T06:39:33.679Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-09T06:39:34.202Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-09T06:39:34.249Z  INFO 8976 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-09T06:39:35.013Z  INFO 8976 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4eb63dc8
+2024-08-09T06:39:35.020Z  INFO 8976 --- [PortfolioManagementBackend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-09T06:39:37.120Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-09T06:39:37.409Z  INFO 8976 --- [PortfolioManagementBackend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T06:39:37.953Z  WARN 8976 --- [PortfolioManagementBackend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-09T06:39:38.557Z  INFO 8976 --- [PortfolioManagementBackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-09T06:39:38.573Z  INFO 8976 --- [PortfolioManagementBackend] [main] .P.PortfolioManagementBackendApplication : Started PortfolioManagementBackendApplication in 9.845 seconds (process running for 10.573)
+2024-08-09T06:40:09.562Z  INFO 8976 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-09T06:40:09.562Z  INFO 8976 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-09T06:40:09.564Z  INFO 8976 --- [PortfolioManagementBackend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-09T06:49:55.960Z  INFO 8976 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09T06:49:55.967Z  INFO 8976 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-09T06:49:55.985Z  INFO 8976 --- [PortfolioManagementBackend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
