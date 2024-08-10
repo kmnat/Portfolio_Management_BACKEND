@@ -18,5 +18,9 @@ public class CashflowService {
     {
         return cashflowRepo.findAll();
     }
+
+    public List<Object> pnlCashFlow(){ return cashflowRepo.pnlCashFlow(); }
+
+    public List<Object> getAllPnlCashFlow(){ return cashflowRepo.allPnlCashFlow(); }
 }
 
