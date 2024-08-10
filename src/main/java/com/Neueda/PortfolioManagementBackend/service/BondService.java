@@ -16,5 +16,21 @@ public class BondService {
     {
         return bondrepo.findAll();
     }
+
+    public Double sumOfBondPrice()
+    {
+        return bondrepo.sumOfBondPrice();
+    }
+
+    public List<Object> sumOfBondPriceByInstrument()
+    {
+        return bondrepo.sumOfBondPriceByInstrument();
+    }
+
+    public List<Object> getTimeSeriesBond(String id)
+    {
+        return bondrepo.getTimeSeriesBond(id);
+    }
+
 }
 

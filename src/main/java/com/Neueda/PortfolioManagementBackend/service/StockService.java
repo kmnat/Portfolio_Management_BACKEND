@@ -16,9 +16,21 @@ public class StockService {
     {
         return stockrepo.findAll();
     }
-//
-//    public Stock getStockById(Integer id)
-//    {
-//        return stockrepo.findById(id);
-//    }
+
+
+    public Double sumOfStockPrice()
+    {
+        return stockrepo.sumOfStockPrice();
+    }
+
+    public List<Object> sumOfStockPriceByInstrument()
+    {
+        return stockrepo.sumOfStockPriceByInstrument();
+    }
+
+    public List<Object> getTimeSeriesStock(String id)
+    {
+        return stockrepo.getTimeSeriesStock(id);
+    }
+
 }
