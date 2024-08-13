@@ -3,6 +3,8 @@ package com.Neueda.PortfolioManagementBackend.model;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import jakarta.persistence.*;
 
+import java.sql.Date;
+
 @Entity
 public class Bond {
     @EmbeddedId
@@ -22,10 +24,10 @@ public class Bond {
     private double faceValue;
 
     @Column(name = "maturity_date")
-    private String maturityDate;
+    private Date maturityDate;
 
     @Column(name = "maturity_amount")
-    private String maturityAmount;
+    private Double maturityAmount;
 
 
     private String issuer;
@@ -40,11 +42,11 @@ public class Bond {
 
 
 
-    public String getMaturityAmount() {
+    public Double getMaturityAmount() {
         return maturityAmount;
     }
 
-    public void setMaturityAmount(String maturityAmount) {
+    public void setMaturityAmount(Double maturityAmount) {
         this.maturityAmount = maturityAmount;
     }
 
@@ -88,11 +90,11 @@ public class Bond {
         this.issuer = issuer;
     }
 
-    public String getMaturityDate() {
+    public Date getMaturityDate() {
         return maturityDate;
     }
 
-    public void setMaturityDate(String maturityDate) {
+    public void setMaturityDate(Date maturityDate) {
         this.maturityDate = maturityDate;
     }
 }

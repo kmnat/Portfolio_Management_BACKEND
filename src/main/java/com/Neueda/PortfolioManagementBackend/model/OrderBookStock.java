@@ -2,6 +2,7 @@ package com.Neueda.PortfolioManagementBackend.model;
 
 import jakarta.persistence.*;
 
+import java.sql.Date;
 @Entity
 public class OrderBookStock {
 
@@ -12,7 +13,7 @@ public class OrderBookStock {
 
     @OneToOne
     @JoinColumns({
-            @JoinColumn(name = "ticker_symbol", referencedColumnName = "ticker_symbol"),
+            @JoinColumn(name = "tickerSymbol", referencedColumnName = "tickerSymbol"),
             @JoinColumn(name = "trade_date", referencedColumnName = "tradeDate")
     })
     private Stock stock;
@@ -27,8 +28,7 @@ public class OrderBookStock {
     private Date transaction_date;*/
 
     @Column(name = "bought_price")
-    private Integer bought_price;
-
+    private Double bought_price;
 
     public int getOrder_id() {
         return order_id;
@@ -70,11 +70,11 @@ public class OrderBookStock {
         this.transaction_date = transaction_date;
     }*/
 
-    public Integer getBought_price() {
+    public Double getBought_price() {
         return bought_price;
     }
 
-    public void setBought_price(Integer bought_price) {
+    public void setBought_price(Double bought_price) {
         this.bought_price = bought_price;
     }
 }
