@@ -6,10 +6,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
 public interface BondRepo extends JpaRepository<Bond, Integer> {
+
+    Bond findById_TickerSymbolAndId_TradeDate(String tickerSymbol, Date tradeDate);
+    List<Bond> findByIdTradeDate(Date tradeDate);
 
     @Query(value = "SELECT SUM(bond_price) FROM bond", nativeQuery = true)
     Double sumOfBondPrice();

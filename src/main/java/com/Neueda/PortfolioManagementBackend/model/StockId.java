@@ -8,25 +8,25 @@ import java.util.Objects;
 @Embeddable
 public class StockId implements Serializable {
 
-    private String ticker_symbol;
+    private String tickerSymbol;
     private Date tradeDate;
 
     // Default constructor
     public StockId() {}
 
     public StockId(String tickerSymbol, Date tradeDate) {
-        this.ticker_symbol = tickerSymbol;
+        this.tickerSymbol = tickerSymbol;
         this.tradeDate = tradeDate;
     }
 
     // Getters and Setters
 
-    public String getTicker_symbol() {
-        return ticker_symbol;
+    public String getTickerSymbol() {
+        return tickerSymbol;
     }
 
-    public void setTicker_symbol(String ticker_symbol) {
-        this.ticker_symbol = ticker_symbol;
+    public void setTickerSymbol(String tickerSymbol) {
+        this.tickerSymbol = tickerSymbol;
     }
 
     public Date getTradeDate() {
@@ -40,7 +40,7 @@ public class StockId implements Serializable {
     // hashCode and equals methods (necessary for composite keys)
     @Override
     public int hashCode() {
-        return Objects.hash(ticker_symbol, tradeDate);
+        return Objects.hash(tickerSymbol, tradeDate);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class StockId implements Serializable {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         StockId that = (StockId) obj;
-        return Objects.equals(ticker_symbol, that.ticker_symbol) &&
+        return Objects.equals(tickerSymbol, that.tickerSymbol) &&
                 Objects.equals(tradeDate, that.tradeDate);
     }
 }

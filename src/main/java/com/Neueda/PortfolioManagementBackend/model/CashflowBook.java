@@ -8,6 +8,8 @@ import java.sql.Date;
 public class CashflowBook {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int Cashflow_id;
     @Column
     private String ticker_symbol;

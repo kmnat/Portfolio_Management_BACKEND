@@ -16,7 +16,7 @@ public class OrderBookBond {
     private int order_id;
     @OneToOne
     @JoinColumns({
-            @JoinColumn(name = "ticker_symbol", referencedColumnName = "ticker_symbol"),
+            @JoinColumn(name = "tickerSymbol", referencedColumnName = "tickerSymbol"),
             @JoinColumn(name = "trade_date", referencedColumnName = "tradeDate")
     })
     private Bond bond;
@@ -28,13 +28,22 @@ public class OrderBookBond {
     private Date transaction_date;*/
 
     @Column(name = "bond_price")
-    private Integer bond_price;
+    private Double bond_price;
 
 
     @Column(name = "maturity_date")
     private Date maturityDate;
 
+    @Column(name = "maturity_amount")
+    private double maturityAmount;
 
+    public double getMaturityAmount() {
+        return maturityAmount;
+    }
+
+    public void setMaturityAmount(double maturityAmount) {
+        this.maturityAmount = maturityAmount;
+    }
 
     public int getOrder_id() {
         return order_id;
@@ -68,11 +77,11 @@ public class OrderBookBond {
         this.transaction_date = transaction_date;
     }*/
 
-    public Integer getBond_price() {
+    public Double getBond_price() {
         return bond_price;
     }
 
-    public void setBond_price(Integer bond_price) {
+    public void setBond_price(Double bond_price) {
         this.bond_price = bond_price;
     }
 

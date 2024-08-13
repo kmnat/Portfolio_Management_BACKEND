@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
@@ -19,4 +20,6 @@ public interface StockRepo extends JpaRepository<Stock, Integer> {
     @Query(value = "select stock_price, trade_date from stock where ticker_symbol=:id", nativeQuery = true)
     List<Object> getTimeSeriesStock(@Param("id") String id);
 
+    List<Stock> findByIdTradeDate(Date tradeDate);
+    Stock findById_TickerSymbolAndId_TradeDate(String tickerSymbol, Date tradeDate);
 }

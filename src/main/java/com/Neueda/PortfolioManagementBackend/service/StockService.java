@@ -5,18 +5,23 @@ import com.Neueda.PortfolioManagementBackend.repository.StockRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class StockService {
     @Autowired
     private StockRepo stockrepo;
 
-    public List<Stock> getAllStocks()
+    public List<Stock> getAllStocks(Date d)
     {
-        return stockrepo.findAll();
-    }
 
+        return stockrepo.findByIdTradeDate(d);
+
+    }
 
     public Double sumOfStockPrice()
     {
@@ -28,9 +33,26 @@ public class StockService {
         return stockrepo.sumOfStockPriceByInstrument();
     }
 
-    public List<Object> getTimeSeriesStock(String id)
+    public Map<String, List<?>> getTimeSeriesStock(String id)
     {
-        return stockrepo.getTimeSeriesStock(id);
+        return convertToMap(stockrepo.getTimeSeriesStock(id));
+    }
+
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+    public Map<String, List<?>> convertToMap(List<Object> stockData) {
+        List<Double> prices = stockData.stream()
+                .map(data -> (Double) ((Object[]) data)[0])
+                .collect(Collectors.toList());
+
+        List<String> dates = stockData.stream()
+                .map(data -> dateFormat.format((Date) ((Object[]) data)[1]))
+                .collect(Collectors.toList());
+
+        return Map.of(
+                "dates", dates,
+                "prices", prices
+        );
     }
 
 }

@@ -1,10 +1,12 @@
 package com.Neueda.PortfolioManagementBackend.model;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import jakarta.persistence.*;
 
 @Entity
 public class Stock {
     @EmbeddedId
+    @JsonUnwrapped
     private StockId id;
 
     @Column(name = "average_volume")
