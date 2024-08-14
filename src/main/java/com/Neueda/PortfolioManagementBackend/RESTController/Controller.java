@@ -25,7 +25,6 @@ public class Controller {
     private TradeBookService tradeBookService;
     @Autowired
     private StockService stockService;
-
     @Autowired
     private CashflowService cashService;
 
@@ -89,12 +88,15 @@ public class Controller {
     @GetMapping("/stock_price_sum")
     public Double getStockPriceSum(){ return stockService.sumOfStockPrice(); }
 
+    @GetMapping("/unrealised_pnl/{id}")
+    public Double getUnrealisedPnl(@PathVariable String id){ return orderBookStockService.getCurrentPrice(id, Date.valueOf(LocalDate.now())); }
+
     //5.2
     @GetMapping("/bond_price_sum_instr")
-    public List<Object> getBondPriceSumByInstrument(){ return bondService.sumOfBondPriceByInstrument(); }
+    public Map<String, List<?>> getBondPriceSumByInstrument(){ return bondService.sumOfBondPriceByInstrument(); }
 
     @GetMapping("/stock_price_sum_instr")
-    public List<Object> getStockPriceSumByInstrument(){ return stockService.sumOfStockPriceByInstrument(); }
+    public  Map<String, List<?>> getStockPriceSumByInstrument(){ return stockService.sumOfStockPriceByInstrument(); }
 
     //5.3
     @GetMapping("/timeseries/bond/{id}")
@@ -111,11 +113,11 @@ public class Controller {
 
     //5.4
     @GetMapping("/cashflow_pnl")
-    public List<Object> getPnlCashflow(){ return cashService.pnlCashFlow();}
+    public Map<String, List<?>> getPnlCashflow(){ return cashService.pnlCashFlow();}
 
     //5.5
     @GetMapping("/cashflow_pnl_all")
-    public List<Object> getAllPnlCashflow(){ return cashService.getAllPnlCashFlow();}
+    public Map<String, List<?>> getAllPnlCashflow(){ return cashService.getAllPnlCashFlow();}
 
 
 

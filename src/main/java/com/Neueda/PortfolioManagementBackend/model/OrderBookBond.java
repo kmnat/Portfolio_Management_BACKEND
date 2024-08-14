@@ -15,17 +15,34 @@ public class OrderBookBond {
     @Column(name = "order_id")
     private int order_id;
     @OneToOne
-    @JoinColumns({
-            @JoinColumn(name = "tickerSymbol", referencedColumnName = "tickerSymbol"),
-            @JoinColumn(name = "trade_date", referencedColumnName = "tradeDate")
-    })
+    @JoinColumn(name = "tickerSymbol", referencedColumnName = "tickerSymbol")
+    @JoinColumn(name = "tradeDate", referencedColumnName = "tradeDate")
     private Bond bond;
 
     @Column(name = "asset_name")
     private String asset_name;
 
     /*@Column(name = "transaction_date")
-    private Date transaction_date;*/
+    private Date transaction_date;
+
+    public Date getTransaction_date() {
+        return transaction_date;
+    }
+
+    public void setTransaction_date(Date transaction_date) {
+        this.transaction_date = transaction_date;
+    }*/
+
+    @Column(name = "quantity")
+    private int quantity;
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 
     @Column(name = "bond_price")
     private Double bond_price;
