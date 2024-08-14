@@ -23,10 +23,27 @@ public class BondService {
         return bondrepo.sumOfBondPrice();
     }
 
-    public List<Object> sumOfBondPriceByInstrument()
+    public Map<String, List<?>> sumOfBondPriceByInstrument()
     {
-        return bondrepo.sumOfBondPriceByInstrument();
+
+        return convertToMapSum(bondrepo.sumOfBondPriceByInstrument());
     }
+
+    public Map<String, List<?>> convertToMapSum(List<Object> bondData) {
+        List<Double> prices = bondData.stream()
+                .map(data -> (Double) ((Object[]) data)[0])
+                .collect(Collectors.toList());
+
+        List<String> names = bondData.stream()
+                .map(data -> ((String) ((Object[]) data)[1]).toLowerCase().replace("bond", "bond "))
+                .collect(Collectors.toList());
+
+        return Map.of(
+                "price", prices,
+                "name", names
+        );
+    }
+
 
     public Map<String, List<?>> getTimeSeriesBond(String id)
     {
@@ -44,12 +61,12 @@ public class BondService {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    public Map<String, List<?>> convertToMap(List<Object> stockData) {
-        List<Double> prices = stockData.stream()
+    public Map<String, List<?>> convertToMap(List<Object> bondData) {
+        List<Double> prices = bondData.stream()
                 .map(data -> (Double) ((Object[]) data)[0])
                 .collect(Collectors.toList());
 
-        List<String> dates = stockData.stream()
+        List<String> dates = bondData.stream()
                 .map(data -> dateFormat.format((Date) ((Object[]) data)[1]))
                 .collect(Collectors.toList());
 

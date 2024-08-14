@@ -21,5 +21,6 @@ public interface StockRepo extends JpaRepository<Stock, Integer> {
     List<Object> getTimeSeriesStock(@Param("id") String id);
 
     List<Stock> findByIdTradeDate(Date tradeDate);
+
     Stock findById_TickerSymbolAndId_TradeDate(String tickerSymbol, Date tradeDate);
 }

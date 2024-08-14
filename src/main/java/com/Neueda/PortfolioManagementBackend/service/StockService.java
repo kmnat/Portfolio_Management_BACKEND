@@ -28,10 +28,26 @@ public class StockService {
         return stockrepo.sumOfStockPrice();
     }
 
-    public List<Object> sumOfStockPriceByInstrument()
+    public Map<String, List<?>> sumOfStockPriceByInstrument()
     {
-        return stockrepo.sumOfStockPriceByInstrument();
+        return convertToMapSum(stockrepo.sumOfStockPriceByInstrument());
     }
+
+    public Map<String, List<?>> convertToMapSum(List<Object> stockData) {
+        List<Double> prices = stockData.stream()
+                .map(data -> (Double) ((Object[]) data)[0])
+                .collect(Collectors.toList());
+
+        List<String> names = stockData.stream()
+                .map(data -> ((String) ((Object[]) data)[1]).toLowerCase().replace("bond", "bond "))
+                .collect(Collectors.toList());
+
+        return Map.of(
+                "price", prices,
+                "name", names
+        );
+    }
+
 
     public Map<String, List<?>> getTimeSeriesStock(String id)
     {
@@ -54,5 +70,6 @@ public class StockService {
                 "prices", prices
         );
     }
+
 
 }
