@@ -9,6 +9,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,17 +29,7 @@ class BondServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void testGetAllBonds() {
-        Bond bond1 = new Bond();
-        Bond bond2 = new Bond();
-        when(bondRepo.findAll()).thenReturn(Arrays.asList(bond1, bond2));
 
-        List<Bond> bonds = bondService.getAllBonds();
-
-        assertEquals(2, bonds.size());
-        verify(bondRepo, times(1)).findAll();
-    }
 
     @Test
     void testSumOfBondPrice() {

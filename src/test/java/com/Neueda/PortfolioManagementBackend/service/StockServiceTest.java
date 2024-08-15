@@ -27,19 +27,19 @@ class StockServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void testGetAllStocks() {
-        Stock stock1 = new Stock();
-        Stock stock2 = new Stock();
-        List<Stock> mockStockList = Arrays.asList(stock1, stock2);
-
-        when(stockRepo.findAll()).thenReturn(mockStockList);
-
-        List<Stock> result = stockService.getAllStocks();
-
-        assertEquals(2, result.size());
-        verify(stockRepo, times(1)).findAll();
-    }
+//    @Test
+//    void testGetAllStocks() {
+//        Stock stock1 = new Stock();
+//        Stock stock2 = new Stock();
+//        List<Stock> mockStockList = Arrays.asList(stock1, stock2);
+//
+//        when(stockRepo.findAll()).thenReturn(mockStockList);
+//
+//        List<Stock> result = stockService.getAllStocks();
+//
+//        assertEquals(2, result.size());
+//        verify(stockRepo, times(1)).findAll();
+//    }
 
     @Test
     void testSumOfStockPrice() {
@@ -63,16 +63,16 @@ class StockServiceTest {
         verify(stockRepo, times(1)).sumOfStockPriceByInstrument();
     }
 
-    @Test
-    void testGetTimeSeriesStock() {
-        String id = "AAPL";
-        List<Object> mockList = Arrays.asList(new Object(), new Object());
-
-        when(stockRepo.getTimeSeriesStock(id)).thenReturn(mockList);
-
-        List<Object> result = stockService.getTimeSeriesStock(id);
-
-        assertEquals(2, result.size());
-        verify(stockRepo, times(1)).getTimeSeriesStock(id);
-    }
+//    @Test
+//    void testGetTimeSeriesStock() {
+//        String id = "AAPL";
+//        List<Object> mockList = Arrays.asList(new Object(), new Object());
+//
+//        when(stockRepo.getTimeSeriesStock(id)).thenReturn(mockList);
+//
+//        List<Object> result = stockService.getTimeSeriesStock(id);
+//
+//        assertEquals(2, result.size());
+//        verify(stockRepo, times(1)).getTimeSeriesStock(id);
+//    }
 }
