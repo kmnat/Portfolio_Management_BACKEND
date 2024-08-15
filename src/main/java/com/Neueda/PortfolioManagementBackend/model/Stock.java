@@ -19,7 +19,7 @@ public class Stock {
     private String industry;
 
     @Column(name = "market_exchange")
-    private double marketExchange;
+    private String marketExchange;
 
     @Column(name = "stock_price")
     private double stockPrice;
@@ -76,11 +76,11 @@ public class Stock {
         this.industry = industry;
     }
 
-    public double getMarketExchange() {
+    public String getMarketExchange() {
         return marketExchange;
     }
 
-    public void setMarketExchange(double marketExchange) {
+    public void setMarketExchange(String marketExchange) {
         this.marketExchange = marketExchange;
     }
 
